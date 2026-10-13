@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reddit Earning</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f5f9;
+      color: #202938;
+    }
+    header {
+      background: #ff4500;
+      color: white;
+      padding: 24px 16px;
+      text-align: center;
+    }
+    header h1 { margin: 0 0 8px; }
+    main {
+      max-width: 480px;
+      margin: 22px auto;
+      padding: 0 14px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      margin-bottom: 16px;
+      border-radius: 14px;
+      box-shadow: 0 3px 12px #0000000d;
+    }
+    h2 { margin-top: 0; }
+    .reward {
+      color: #16803c;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    label {
+      display: block;
+      margin: 14px 0 6px;
+      font-weight: bold;
+    }
+    input {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #ccd2dc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    button, .link {
+      display: block;
+      width: 100%;
+      padding: 13px;
+      margin-top: 14px;
+      border: 0;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    button { background: #ff4500; color: white; }
+    .link { background: #16803c; color: white; }
+    .note { font-size: 13px; color: #606978; line-height: 1.5; }
+    footer { text-align: center; padding: 20px; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Reddit Earning</h1>
+    <p>Learn tasks and earn rewards</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Welcome!</h2>
+      <p>Eligible aur approved task ke liye reward:</p>
+      <div class="reward">₹80 / task</div>
+      <p>Working hours: 10 AM – 10 PM</p>
+      <p class="note">
+        Reward task ki eligibility aur approval par depend karega.
+        Koi guaranteed earning nahi hai.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Registration</h2>
+      <form id="registerForm">
+        <label for="name">Your Name</label>
+        <input id="name" name="name" type="text"
+          placeholder="Apna naam likhein" required>
+
+        <label for="mobile">Mobile Number</label>
+        <input id="mobile" name="mobile" type="tel"
+          inputmode="numeric" pattern="[0-9]{10}"
+          maxlength="10" placeholder="10 digit mobile number"
+          required>
+
+        <button type="submit">Register Now</button>
+      </form>
+      <p class="note">
+        Demo version: registration abhi save nahi hota.
+        Real registration ke liye secure backend connect karna hoga.
+      </p>
+      <p id="message" role="status"></p>
+    </section>
+
+    <section class="card">
+      <h2>How to Start</h2>
+      <p>1. Reddit app install karein.</p>
+      <a class="link"
+        href="https://play.google.com/store/apps/details?id=com.reddit.frontpage"
+        target="_blank" rel="noopener">
+        Install Reddit
+      </a>
+      <p>2. Updates ke liye WhatsApp channel join karein.</p>
+      <a class="link"
+        href="https://chat.whatsapp.com/GKF0UeQNcXD2cA3teZNNZB?s=cl&p=a&mlu=4&ilr=4"
+        target="_blank" rel="noopener">
+        Join WhatsApp Channel
+      </a>
+    </section>
+
+    <section class="card">
+      <h2>Important Notice</h2>
+      <p class="note">
+        This is an independent project and is not affiliated with,
+        endorsed by, or sponsored by Reddit. Rewards and tasks are
+        subject to verification and applicable rules.
+      </p>
+    </section>
+  </main>
+
+  <footer>Reddit Earning | Please read all task conditions.</footer>
+
+  <script>
+    document.getElementById("registerForm").addEventListener(
+      "submit", function(event) {
+        event.preventDefault();
+        document.getElementById("message").textContent =
+          "Demo only: your details have not been saved yet.";
+      }
+    );
+  </script>
+</body>
+</html>
